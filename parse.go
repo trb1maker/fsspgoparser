@@ -100,7 +100,7 @@ func ParseDepartment(s string) (departmentName string) {
 func ParseBailiff(s string) (bailiffName string, bailiffPhone string) {
 	data := bailiff.FindAllStringSubmatch(s, 1)
 
-	bailiffName = fmt.Sprintf("%s %s%s", data[0][1], data[0][2], data[0][3])
+	bailiffName = fmt.Sprintf("%s %s%s", titleWord(data[0][1]), data[0][2], data[0][3])
 	bailiffPhone = data[0][4]
 
 	return bailiffName, bailiffPhone
