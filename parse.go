@@ -90,6 +90,10 @@ func ParseSubject(s string) (themeSubject string, mainSum float64, addonSum floa
 }
 
 func ParseDepartment(s string) (departmentName string) {
+	if !department.MatchString(s) {
+		return s
+	}
+
 	data := department.FindAllStringSubmatch(s, 1)
 
 	departmentName = data[0][1]
