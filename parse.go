@@ -68,17 +68,17 @@ func ParseSubject(s string) (themeSubject string, mainSum float64, addonSum floa
 	if len(data) == 2 {
 		themeSubject = data[0][1]
 		if data[0][2] != "" {
-			mainSum, _ = strconv.ParseFloat(data[0][2], 10)
+			mainSum, _ = strconv.ParseFloat(data[0][2], 32)
 		}
 		if data[1][2] != "" {
-			addonSum, _ = strconv.ParseFloat(data[1][2], 10)
+			addonSum, _ = strconv.ParseFloat(data[1][2], 32)
 		}
 	}
 
 	if len(data) == 1 {
 		themeSubject = data[0][1]
 		if data[0][2] != "" {
-			mainSum, _ = strconv.ParseFloat(data[0][2], 10)
+			mainSum, _ = strconv.ParseFloat(data[0][2], 32)
 		}
 	}
 
